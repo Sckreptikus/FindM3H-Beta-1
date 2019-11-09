@@ -1098,7 +1098,7 @@ printf "\e[1;92m Found!\e[0m https://ArtFixed.com/author/$username" $username
 printf "https://ArtFixed/author/$username" $username >> $username.txt
 
 partial
-}
+
 banner
 scanner
 
