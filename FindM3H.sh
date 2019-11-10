@@ -1,10 +1,5 @@
 #!/bin/bash
 
-#
-UserRecon v1 .0# Author: @linux_choice# https: //github.com/thelinuxchoice/userrecon
-  #Give me the credits
-if you use any part of this code, read the License.
-
 trap 'printf "\n";partial;exit 1'
 2
 
@@ -1583,6 +1578,6 @@ scanner() {
 
     fi
     partial
-
+    }
     banner
     scanner
