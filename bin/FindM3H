@@ -1,0 +1,52 @@
+#!/usr/bin/env python3
+
+import sys
+from pathlib import Path
+
+
+try:
+    from docopt import docopt
+
+except ModuleNotFoundError as e:
+    print(f"[-] error: {e}")
+    print(
+        "[!] please install the requirements: $ sudo -H pip3 install -r requirements.txt"
+    )
+    sys.exit(1)
+
+try:
+    path = str(Path(__file__).resolve().parents[1])
+    sys.path.insert(0, path)
+
+    from FindM3H import __version__
+    from FindM3H import banner
+    from FindM3H import core
+
+except ModuleNotFoundError as e:
+    print(f"[-] error: {e}")
+    sys.exit(1)
+
+
+USAGE = f"""FindM3H v{__version__}
+
+Usage:
+    FindM3H target USERNAME (--all | --positive | --negative) [--output]
+
+Arguments:
+    -a, --all       Print all results
+    -p, --positive  Print positive results
+    -n, --negative  Print negative results
+
+Options:
+    -o, --output    Save output in JSON format.
+    -h, --help      Show this screen.
+    --version       Show version.
+"""
+
+
+if __name__ == "__main__":
+
+    args = docopt(USAGE, version=f"FindM3H v{__version__}")
+    banner.print_banner(__version__)
+    app = core.Userreconpy(args)
+    app.main()

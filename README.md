@@ -1,8 +1,38 @@
-# FindM3H v1.0
-# Author: @anonhack990, Origional:@linux_choice
+# FindM3H
+Username recognition on various websites.
+
+---
+
+## Installation
+
+#### With `pip3`
+```bash
+# Linux
+sudo -H pip3 install git+https://github.com/anonhack990/FindM3H-Beta-1.git --upgrade
+FindM3H --help
+```
+
+#### Build from source
+```bash
+# Linux
+git clone https://github.com/Anonhack990/FindM3H-Beta-1.git ; cd FindM3H-Beta-1
+sudo -H pip3 install -r requirements.txt
+python3 setup.py build
+sudo python3 setup.py install
+```
+---
+
+## Usage
+Start by printing the available actions by running `FindM3H --help`. Then you can perform the following tests:
+```bash
+# print all results.
+FindM3H target Anonhack990 --all -o test
 
 
-Find usernames across over 80 social networks
-This is useful if you are running an investigation to determine the usage of the same username on different social networks.
+# print positive results.
+FindM3H target Anonhack990 --positive -o test
 
-![ur](https://user-images.githubusercontent.com/34893261/43992221-49d40f1c-9d52-11e8-8f58-24ae4aa11dd6.png)
+
+# print negative results.
+FindM3H target Anonhack990 --negative  -o test
+```
