@@ -1,8 +1,5 @@
 #!/bin/bash
 
-trap 'printf "\n";partial;exit 1'
-2
-
 banner() {
 
   printf "                                                   \e[1;92m.-\"\"\"\"-. \e[0m\n"
