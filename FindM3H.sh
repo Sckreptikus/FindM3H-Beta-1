@@ -58,7 +58,7 @@ scanner() {
     printf "https://www.instagram.com/%s\n"
     $username > $username.txt
     elif[[$check_insta == * '0' * ]];
-    then
+    
     printf "\e[1;93mNot Found!\e[0m\n"
     fi
 
