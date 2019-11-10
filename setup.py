@@ -25,16 +25,17 @@ setup(
     version=__version__,
     description="Find usernames in social networks.",
     long_description=long_description,
-    author="Anonhack990"
+    author="Anonhack990",
+    author_email="noreply@gmail.com",
+    url="https://github.com/Anonhack990/FindM3H-Beta-1",
     packages=find_packages(),
     scripts=["bin/FindM3H"],
     license="MIT",
     install_requires=read_requirements(),
-    package_data={"FindM3H": ["web_accounts_list.json"]},
+    package_data={"Anonhack990": ["web_accounts_list.json"]},
     classifiers=[
         "Programming Language :: Python3",
         "License :: MIT",
         "Environment :: Console",
     ],
 )
-
